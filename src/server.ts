@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+require("dotenv").config();
 
 const mongoURI: string = process.env.MONGODB_URI || "";
 
 if (!mongoURI) {
   console.error("MongoDB URI is not provided in the environment variable.");
-  process.exit(1); 
+  process.exit(1);
 }
 export const connectDB = async () => {
   try {
