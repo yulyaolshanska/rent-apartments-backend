@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: rent-apartments
+    env: node
+    plan: free
+    repo: https://github.com/yulyaolshanska/rent-apartments-backend
+    branch: main
+    buildCommand: yarn install
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        fromDatabase:
+          name: mongodb.net/rent-apartments
+          property: connectionString
