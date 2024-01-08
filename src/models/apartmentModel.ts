@@ -7,6 +7,8 @@ interface IApartment extends Document {
   type: string;
   address: string;
   price: number;
+  lat: number;
+  lng: number;
 }
 
 const apartmentSchema = new Schema<IApartment>({
@@ -16,6 +18,8 @@ const apartmentSchema = new Schema<IApartment>({
   type: String,
   address: String,
   price: Number,
+  lat: Number,
+  lng: Number,
 });
 
 export default model<IApartment>("Apartment", apartmentSchema);
