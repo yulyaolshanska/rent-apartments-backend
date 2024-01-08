@@ -12,5 +12,5 @@ services:
         value: production
       - key: MONGODB_URI
         fromDatabase:
-          name: mongodb.net/rent-apartments
+          name: mongodb.net/rent-apartment
           property: connectionString
