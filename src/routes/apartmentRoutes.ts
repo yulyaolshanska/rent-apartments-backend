@@ -1,8 +1,12 @@
 import express from "express";
-import { getApartments } from "../controllers/apartmentController";
+import {
+  addApartment,
+  getApartments,
+} from "../controllers/apartmentController";
 
 const router = express.Router();
 
 router.get("/", getApartments);
+router.post("/add", addApartment);
 
 export default router;
