@@ -15,6 +15,7 @@ export const addApartment = async (req: Request, res: Response) => {
     const newApartment = await Apartment.create(req.body);
     res.status(201).json(newApartment);
   } catch (error) {
+    console.error("Error adding apartment:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
